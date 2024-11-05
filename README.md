@@ -1,2 +1,2 @@
-# veinda
+# super
 responsive-html-css-template
