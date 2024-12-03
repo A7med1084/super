@@ -386,6 +386,7 @@ a {
     border-radius: 10px;
     box-shadow: 0 0 30px -5px #0000005a;
     transition: var(--main-transition);
+    overflow: hidden;
 }
 .articles .content .box:hover {
     transform: translatey(-10px);
@@ -394,6 +395,10 @@ a {
     border-radius: 10px 10px 0 0;
     width: 100%;
     height: 155px;
+    transition: var(--main-transition);
+}
+.articles .content .box:hover img {
+    transform: scale(1.08);
 }
 .articles .content .box .text {
     padding: 15px;
