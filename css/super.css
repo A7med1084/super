@@ -391,6 +391,10 @@ a {
 .articles .content .box:hover {
     transform: translatey(-10px);
 }
+.articles .content .box .image {
+    height: 155px;
+    overflow: hidden;
+}
 .articles .content .box img {
     border-radius: 10px 10px 0 0;
     width: 100%;
