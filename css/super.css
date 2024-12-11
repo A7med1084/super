@@ -97,6 +97,16 @@ a {
     border-radius: 0;
 }
 /* end components */
+.fa-arrow-up {
+    color: var(--main-color);
+    position: fixed;
+    z-index: 1000;
+    bottom: 30px;
+    right: 30px;
+    font-size: 30px;
+    transition: var(--main-transition);
+    animation: bouncing 1.5s infinite linear;
+}
 /* start header */
 .header {
     box-shadow: 0 0 15px -10px #000;
@@ -479,6 +489,7 @@ a {
 /* start features */
 .features {
     padding: var(--section-padding);
+    background-color: #fff;
 }
 .features .content {
     display: grid;
@@ -583,7 +594,7 @@ a {
     padding: 10px 20px;
     font-size: 20px;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 8px;
     position: relative;
     overflow: hidden;
     transition: var(--main-transition);
@@ -632,6 +643,69 @@ a {
     background-color: #0d1282;
 }
 /* end features */
+/* start testimonials */
+.testimonials {
+    padding: var(--section-padding);
+    background-color: var(--section-color);
+    position: relative;
+}
+.testimonials::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 20px;
+    background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
+    background-size: 30px 30px;
+}
+.testimonials .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 35px;
+    margin-top: 60px;
+}
+.testimonials .content .box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+.testimonials .content .box .image-holder {
+    border: 15px solid var(--section-color);
+    width: fit-content;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -60px;
+    right: -10px;
+}
+.testimonials .content .box img {
+    height: 80px;
+    border-radius: 50%;
+}
+.testimonials .content .box h3 {
+    margin: 15px 0;
+    color: var(--main-color);
+    font-size: 17px;
+}
+.testimonials .content .box i {
+    color: #ffbd34;
+}
+.testimonials .content .box .profession {
+    color: #555;
+    margin: 0;
+}
+.testimonials .content .box .rating {
+    margin: 15px 0;
+}
+.testimonials .content .box .text {
+    color: #777;
+    line-height: 1.7;
+    margin: 0;
+}
+/* end testimonials */
 /* start animation */
 @keyframes up-and-down {
     0%, 100% {
