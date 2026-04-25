@@ -97,6 +97,7 @@ a {
   border-radius: 0;
 }
 /* end components */
+/* go up */
 .fa-arrow-up {
   color: var(--main-color);
   position: fixed;
@@ -109,11 +110,15 @@ a {
 }
 /* start header */
 .header {
-  background-color: #fff;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    transition: .5s;
+}
+.shadow {
+  background-color: #ffffffde;
+  backdrop-filter: blur(10px);
   box-shadow: 0 0 15px -10px #000;
-  width: 100%;
-  z-index: 100;
-  position: fixed;
 }
 .header .container {
   display: flex;
@@ -783,7 +788,7 @@ a {
 .team-members .content .box .image-holder .contact i {
   padding: 12px 0;
   color: #808080;
-  transition: .2s;
+  transition: 0.2s;
   font-size: 18px;
 }
 .team-members .content .box .image-holder .contact i:hover {
