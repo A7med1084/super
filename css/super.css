@@ -98,15 +98,43 @@ a {
 }
 /* end components */
 /* go up */
-.fa-arrow-up {
-  color: var(--main-color);
+.up {
+  color: #fff;
   position: fixed;
   z-index: 1000;
-  bottom: 30px;
-  right: 30px;
+  bottom: 50px;
+  right: 50px;
   font-size: 30px;
-  transition: var(--main-transition);
-  animation: bouncing 1.5s infinite linear;
+  transition: 0.5s;
+}
+.up:hover {
+  transform: translateY(-10px);
+}
+.fill {
+  position: absolute;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  transition: .3s;
+}
+.back {
+  position: absolute;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+.up i {
+  position: relative;
+  z-index: 1001;
 }
 /* start header */
 .header {
@@ -114,6 +142,7 @@ a {
   z-index: 100;
   position: fixed;
   transition: 0.5s;
+  background-color: #ececec;
 }
 .shadow {
   background-color: #ffffffde;
