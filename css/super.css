@@ -964,6 +964,9 @@ a {
   padding: var(--section-padding);
   position: relative;
 }
+.how-it-works h1 {
+  font-size: 25px;
+}
 /* end how it works */
 /* start animation */
 @keyframes up-and-down {
