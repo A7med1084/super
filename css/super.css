@@ -96,6 +96,17 @@ a {
   height: 100%;
   border-radius: 0;
 }
+.special-top-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 20px;
+  background-image:
+    linear-gradient(135deg, white 25%, transparent 25%),
+    linear-gradient(225deg, white 25%, transparent 25%);
+  background-size: 30px 30px;
+}
 /* end components */
 /* go up */
 .up {
@@ -106,6 +117,12 @@ a {
   right: 50px;
   font-size: 30px;
   transition: 0.5s;
+  opacity: 0;
+  pointer-events: none;
+}
+.show {
+  opacity: 1;
+  pointer-events: initial;
 }
 .up:hover {
   transform: translateY(-10px);
@@ -224,21 +241,12 @@ a {
     height: 2px;
   }
 }
-.header .container > ul > li > a::after {
-  content: "";
-  position: absolute;
-  background-color: var(--fill-color);
-  width: 0;
-  height: 100%;
-  margin-left: 50%;
-  transition: var(--main-transition);
-  left: 0;
-  z-index: -1;
-}
-.header .container > ul > li > a:hover::before,
-.header .container > ul > li > a:hover::after {
+.header .container > ul > li > a:hover::before {
   width: 100%;
   margin-left: 0;
+}
+.header .container > ul > li:last-child:active {
+  pointer-events: none;
 }
 .header .container > ul > li:last-child .content {
   position: absolute;
@@ -287,22 +295,6 @@ a {
     font-size: 14px;
     padding: 15px;
   }
-}
-.header .container > ul > li:last-child .content .links li a:after {
-  content: "";
-  position: absolute;
-  background-color: var(--fill-color);
-  width: 0;
-  height: 100%;
-  margin-left: 50%;
-  transition: var(--main-transition);
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-.header .container > ul > li:last-child .content .links li a:hover::after {
-  width: 100%;
-  margin-left: 0;
 }
 .header .container > ul > li:last-child .content .links li a i {
   font-size: 20px;
@@ -362,7 +354,7 @@ a {
 }
 @media (max-width: 767px) {
   .landing .text h1 {
-    font-size: 28px;
+    font-size: 35px;
     margin-bottom: 30px;
   }
 }
@@ -374,7 +366,7 @@ a {
 }
 @media (max-width: 767px) {
   .landing .text p {
-    font-size: 15px;
+    font-size: 20px;
   }
 }
 .landing img {
@@ -483,7 +475,7 @@ a {
   background-color: var(--section-color);
   position: relative;
 }
-.gallery::before {
+.special-top-section::before {
   content: "";
   position: absolute;
   top: 0;
@@ -699,17 +691,6 @@ a {
   background-color: var(--section-color);
   position: relative;
 }
-.testimonials::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 20px;
-  background-image:
-    linear-gradient(135deg, white 25%, transparent 25%),
-    linear-gradient(225deg, white 25%, transparent 25%);
-  background-size: 30px 30px;
-}
 .testimonials .content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -841,17 +822,6 @@ a {
   padding: var(--section-padding);
   background-color: var(--section-color);
   position: relative;
-}
-.services::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 20px;
-  background-image:
-    linear-gradient(135deg, white 25%, transparent 25%),
-    linear-gradient(225deg, white 25%, transparent 25%);
-  background-size: 30px 30px;
 }
 .services .content {
   display: grid;
@@ -991,6 +961,13 @@ a {
   border-color: #bfbfbf transparent transparent transparent;
 }
 /* end our skills */
+/* start how it works */
+.how-it-works {
+  background-color: var(--section-color);
+  padding: var(--section-padding);
+  position: relative;
+}
+/* end how it works */
 /* start animation */
 @keyframes up-and-down {
   0%,

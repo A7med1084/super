@@ -1,14 +1,16 @@
 "use strict";
 
+const header = document.querySelector(".header");
 const fill = document.querySelector(".fill");
+const up = document.querySelector(".up");
 
 window.addEventListener("scroll", function () {
   if (window.scrollY > 50) {
-    document.querySelector(".up").style.opacity = 1;
-    document.querySelector(".header").classList.add("shadow");
+    up.classList.add("show");
+    header.classList.add("shadow");
 } else {
-    document.querySelector(".up").style.opacity = 0;
-    document.querySelector(".header").classList.remove("shadow");
+    up.classList.remove("show");
+    header.classList.remove("shadow");
   }
   let value = window.scrollY;
   let pageHeight = document.documentElement.scrollHeight;
