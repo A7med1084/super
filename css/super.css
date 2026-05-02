@@ -245,9 +245,6 @@ a {
   width: 100%;
   margin-left: 0;
 }
-.header .container > ul > li:last-child:active {
-  pointer-events: none;
-}
 .header .container > ul > li:last-child .content {
   position: absolute;
   width: 100%;
