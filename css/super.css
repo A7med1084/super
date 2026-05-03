@@ -285,7 +285,7 @@ a {
   font-weight: bold;
 }
 .header .container > ul > li:last-child .content .links li a:hover {
-  padding-left: 40px;
+  padding-left: 30px;
 }
 @media (max-width: 767px) {
   .header .container > ul > li:last-child .content .links li a {
